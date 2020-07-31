@@ -35,3 +35,20 @@ spec:
   selector:
     app: web
   type: NodePort
+  
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "0"
+  name: mynginx
+spec:
+  rules:
+  - host: mynginx-demo-app.192.168.99.100.nip.io
+    http:
+      paths:
+      - backend:
+          serviceName: mynginx
+          servicePort: 80
+        path: /
