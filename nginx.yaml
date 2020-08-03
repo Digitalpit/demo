@@ -16,7 +16,7 @@ spec:
         app: web
     spec:
       containers:
-      - image: pdziedziel/images:mynginx
+      - image: pdziedziel/images:demo
         name: mynginx
 
 ---
