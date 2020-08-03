@@ -18,6 +18,7 @@ spec:
       containers:
       - image: pdziedziel/images:demo
         name: mynginx
+        imagePullPolicy: Always
 
 ---
 apiVersion: v1
